@@ -1,0 +1,167 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Question Renderer */
+
+.question-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.option-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.option-label .option-button {
+  position: relative;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option-label .option-button:hover {
+  background-color: #e0e0e0;
+}
+
+.option-label input[type="radio"]:checked + .option-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 123, 255, 0.1); 
+  border-radius: 5px;
+}
+
+.option-label .option-button.selected {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Multiplayer Controller */
+
+.join-room-container {
+  margin-bottom: 20px;
+}
+
+.join-room-input {
+  padding: 10px;
+  width: calc(100% - 120px); 
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.join-room-button {
+  margin-top: 10px; 
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.join-room-button:hover {
+  background-color: #0056b3;
+}
+
+
+.waiting-room-container {
+  margin-bottom: 20px;
+}
+
+.waiting-message {
+  color: #777;
+}
+
+
+.question-container {
+  margin-bottom: 20px;
+}
+
+.next-question-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.next-question-button:hover {
+  background-color: #218838;
+}
+
+.join-room-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.5; 
+}
